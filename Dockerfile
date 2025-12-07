@@ -5,30 +5,28 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Install system dependencies required for OpenCV and other common libraries
-# libgl1-mesa-glx and libglib2.0-0 are often needed for cv2
+# NOTE: libgl1-mesa-glx no longer exists in Debian Trixie
 RUN apt-get update && apt-get install -y \
     build-essential \
-    libgl1-mesa-glx \
+    libgl1-mesa-gl1 \
     libglib2.0-0 \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy the requirements file into the container at /app
+# Copy Python dependencies
 COPY requirements.txt .
 
-# Install any needed packages specified in requirements.txt
+# Install Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application's code
-# specific to this project structure where apps/streamlit_dashboard.py depends on core/
+# Copy application code
 COPY . .
 
 # Expose port 5000 for Flask API
 EXPOSE 5000
 
-# Healthcheck to ensure the app is running
+# Healthcheck
 HEALTHCHECK CMD curl --fail http://localhost:5000/ || exit 1
 
-# Run the application
-# We run from the root directory so Python path finds 'core'
+# Start the app
 CMD ["python", "apps/flask_server.py"]
