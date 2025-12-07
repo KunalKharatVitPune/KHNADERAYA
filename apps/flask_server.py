@@ -426,9 +426,11 @@ if __name__ == "__main__":
     print(app.url_map)
     
     # Run the Flask app
+    # Run the Flask app
+    port = int(os.environ.get("PORT", 5000))
     app.run(
         host="0.0.0.0",
-        port=5000,
-        debug=True,
-        use_reloader=False  # Disable reloader to prevent restarts during processing
+        port=port,
+        debug=False, # Set debug to False for production
+        use_reloader=False
     )

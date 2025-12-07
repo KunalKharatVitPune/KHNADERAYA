@@ -31,11 +31,11 @@ git push origin main
 ## Step 3: Configure Resources
 
 1.  DigitalOcean should auto-detect the `Dockerfile` and select **Dockerfile** as the build strategy.
-2.  **Service Name**: You can rename it (e.g., `dcrm-app`).
-3.  **HTTP Port**: Ensure this is set to **8501**.
+2.  **Service Name**: You can rename it (e.g., `dcrm-api`).
+3.  **HTTP Port**: Ensure this is set to **5000** (Flask default).
 4.  **Instance Size**: 
     *   Basic / Pro plans work well. 
-    *   **Recommendation**: 1 GB RAM minimum (approx $6/mo) is good for Streamlit.
+    *   **Recommendation**: 1 GB RAM minimum (approx $6/mo) is good for the API.
 5.  Click **Next**.
 
 ## Step 4: Environment Variables

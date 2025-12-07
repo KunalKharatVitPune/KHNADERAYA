@@ -23,12 +23,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # specific to this project structure where apps/streamlit_dashboard.py depends on core/
 COPY . .
 
-# Expose port 8501 for Streamlit
-EXPOSE 8501
+# Expose port 5000 for Flask API
+EXPOSE 5000
 
 # Healthcheck to ensure the app is running
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health || exit 1
+HEALTHCHECK CMD curl --fail http://localhost:5000/ || exit 1
 
 # Run the application
 # We run from the root directory so Python path finds 'core'
-CMD ["streamlit", "run", "apps/streamlit_dashboard.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["python", "apps/flask_server.py"]
