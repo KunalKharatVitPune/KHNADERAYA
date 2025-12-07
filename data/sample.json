@@ -1,0 +1,1231 @@
+{
+    "_id": "6930469c87c9a91efc86c9b8",
+    "b": {
+        "aiVerdict": {
+            "aiAdvice": [
+                {
+                    "color": "#B71C1C",
+                    "confidence": 94,
+                    "description": "Deploy continuous DCRM monitoring system to track contact resistance variations in real-time, enabling early detection of degradation patterns.",
+                    "expectedImpact": "Prevent unexpected failures by 85%",
+                    "id": "1",
+                    "priority": "Critical",
+                    "title": "Implement Real-time Contact Resistance Monitoring"
+                },
+                {
+                    "color": "#F57F17",
+                    "confidence": 89,
+                    "description": "Address the detected contact bounce (55-65ms region) through operating mechanism calibration and spring tension adjustment.",
+                    "expectedImpact": "Reduce contact wear rate by 40%",
+                    "id": "2",
+                    "priority": "High",
+                    "title": "Optimize Contact Bounce Mitigation Strategy"
+                },
+                {
+                    "color": "#F57F17",
+                    "confidence": 92,
+                    "description": "Implement predictive SF6 pressure monitoring with automated alerts for gas quality degradation and leakage detection.",
+                    "expectedImpact": "Maintain optimal arc quenching performance",
+                    "id": "3",
+                    "priority": "High",
+                    "title": "Enhanced SF6 Gas Management Protocol"
+                }
+            ],
+            "confidence": 72.5,
+            "effectAnalysis": {
+                "longTerm": [
+                    "Extended circuit breaker service life by 25-30%",
+                    "Reduced maintenance costs by $50,000-75,000 annually",
+                    "Improved grid reliability and reduced downtime",
+                    "Predictive maintenance scheduling optimization"
+                ],
+                "performanceGains": [
+                    "Improved contact resistance stability",
+                    "Enhanced operational reliability"
+                ],
+                "riskMitigation": [
+                    "Prevent catastrophic failures through early detection",
+                    "Reduce unplanned outages by 75%"
+                ],
+                "shortTerm": [
+                    "Immediate improvement in contact resistance stability",
+                    "Reduced contact bounce amplitude by 60-70%",
+                    "Enhanced SF6 pressure monitoring accuracy",
+                    "Real-time fault detection capabilities"
+                ]
+            },
+            "faultLabel": "Minor Contact Pitting & Bounce",
+            "futureFaultsPdf": [
+                {
+                    "color": "#2E7D32",
+                    "evidence": "Correlated with slight pressure drops over the last 3 tests.",
+                    "fault": "SF6 Gas Pressure Loss (Slow Leak)",
+                    "id": "1",
+                    "probability": 68,
+                    "timeline": "12 - 18 Months"
+                },
+                {
+                    "color": "#F57F17",
+                    "evidence": "Based on minor, recurring deviations in the travel curve signature.",
+                    "fault": "Operating Mechanism Sluggishness",
+                    "id": "2",
+                    "probability": 42,
+                    "timeline": "9 - 12 Months"
+                },
+                {
+                    "color": "#0D47A1",
+                    "evidence": "Common failure mode for this model after 10 years of service.",
+                    "fault": "Auxiliary Switch Timing Drift",
+                    "id": "3",
+                    "probability": 37,
+                    "timeline": "> 24 Months"
+                }
+            ],
+            "maintenanceActions": [
+                {
+                    "actions": [
+                        {
+                            "id": "1",
+                            "justification": "SF6 pressure declining from 7.0 to 6.8 bar over recent tests. Gas quality directly affects arc quenching and contact performance.",
+                            "timeline": "Within 1 month",
+                            "title": "Perform SF6 Gas Analysis and Pressure Check",
+                            "whatToLookFor": [
+                                "SF6 pressure levels",
+                                "Moisture content in gas",
+                                "Gas purity analysis results",
+                                "Leak detection at joints and seals"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#FFCDD2",
+                    "color": "#B71C1C",
+                    "priority": "Priority 1"
+                },
+                {
+                    "actions": [
+                        {
+                            "id": "2",
+                            "justification": "Travel distance measurements show slight deviations from expected values during operation.",
+                            "timeline": "Within 3 months",
+                            "title": "Calibrate Travel Distance Sensors",
+                            "whatToLookFor": [
+                                "Sensor mounting integrity",
+                                "Calibration certificate validity",
+                                "Signal wire connections",
+                                "Reference point accuracy"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#FFF9C4",
+                    "color": "#F57F17",
+                    "priority": "Priority 2"
+                },
+                {
+                    "actions": [
+                        {
+                            "id": "3",
+                            "justification": "Travel time variations suggest increased friction in the operating mechanism.",
+                            "timeline": "Within 6 weeks",
+                            "title": "Lubricate Operating Mechanism",
+                            "whatToLookFor": [
+                                "Lubrication points accessibility",
+                                "Old grease contamination",
+                                "Mechanism wear patterns",
+                                "Spring tension consistency"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#BBDEFB",
+                    "color": "#0D47A1",
+                    "priority": "Priority 3"
+                }
+            ],
+            "rulEstimate": "10000-12000 cycles",
+            "severity": "Medium",
+            "severityReason": "Slight bounce detected which may accelerate contact wear.",
+            "topShapContributors": [
+                {
+                    "contribution": 45,
+                    "feature": "Resistance slope (55-65ms)"
+                },
+                {
+                    "contribution": 25,
+                    "feature": "Peak resistance variance"
+                },
+                {
+                    "contribution": 15,
+                    "feature": "Travel curve post-contact"
+                },
+                {
+                    "contribution": -8,
+                    "feature": "Current zero-cross time"
+                },
+                {
+                    "contribution": -12,
+                    "feature": "Opening speed"
+                }
+            ],
+            "uncertainty": "±1500 cycles"
+        },
+        "cbhi": {
+            "history": [
+                {
+                    "score": 85,
+                    "year": 2022
+                },
+                {
+                    "score": 86,
+                    "year": 2023
+                },
+                {
+                    "score": 87,
+                    "year": 2024
+                }
+            ],
+            "score": 95
+        },
+        "findings": "Minor Contact Pitting & Bounce",
+        "healthScore": 95,
+        "info": {
+            "faultCondition": "Minor Contact Pitting & Bounce",
+            "id": "6926e63d4614721a79b7b24e",
+            "sf6PressureStatus": "Normal",
+            "temperature": 28,
+            "testDate": "03/12/2025",
+            "type": "SF6 400kV"
+        },
+        "kpis": [
+            {
+                "name": "Main Wipe",
+                "unit": "mm",
+                "value": 15.1
+            },
+            {
+                "name": "DLRO Value",
+                "unit": "µΩ",
+                "value": 10.1
+            },
+            {
+                "name": "Contact Travel distance",
+                "unit": "mm",
+                "value": 185
+            },
+            {
+                "name": "Arc Wipe",
+                "unit": "mm",
+                "value": 32
+            },
+            {
+                "name": "Contact Speed",
+                "unit": "m/s",
+                "value": 6.1
+            },
+            {
+                "name": "SF6 Pressure",
+                "unit": "bar",
+                "value": 6.8
+            },
+            {
+                "name": "Peak Resistance",
+                "unit": "µΩ",
+                "value": 101.6
+            },
+            {
+                "name": "Opening Time",
+                "unit": "ms",
+                "value": 28.5
+            },
+            {
+                "name": "Closing Time",
+                "unit": "ms",
+                "value": 85.2
+            },
+            {
+                "name": "Ambient Temp",
+                "unit": "°C",
+                "value": 28
+            }
+        ],
+        "phaseWiseAnalysis": [
+            {
+                "color": "#ff9800",
+                "description": "Initial state before arc contact occurs",
+                "details": {
+                    "characteristics": [
+                        "Contacts are physically separated",
+                        "No electrical conduction",
+                        "Travel distance increasing as contacts approach",
+                        "High resistance due to air gap"
+                    ],
+                    "current": "Low current (~230) - no current flow",
+                    "resistance": "High resistance (~850 µΩ) - contacts are open",
+                    "travel": "Gradual increase from 200 to 500 - contact approaching"
+                },
+                "diagnosticVerdict": "Healthy. This phase serves as a baseline for mechanical operation. A consistent travel curve confirms a healthy operating mechanism without hesitations or obstructions.",
+                "endTime": 95,
+                "eventSynopsis": "The 'Close' command initiates the operating mechanism, which moves the contact assembly towards the fixed contacts. During this phase, there is no electrical connection.",
+                "id": "pre-contact-travel",
+                "name": "Pre-Contact Travel",
+                "phaseNumber": 1,
+                "phaseTitle": "Closing Operation — Pre-Contact Travel",
+                "startTime": 0,
+                "waveformAnalysis": {
+                    "current": "Remains at zero, confirming the absence of any conductive path or leakage.",
+                    "resistance": "Remains at a state of infinite resistance, indicating a clean and sufficient air gap between all contacts.",
+                    "travel": "The curve shows a smooth, continuous ramp, representing the unimpeded mechanical movement of the contacts at the specified closing velocity."
+                }
+            },
+            {
+                "color": "#ff26bd",
+                "description": "Arcing contact engagement and arc initiation",
+                "details": {
+                    "characteristics": [
+                        "Arcing contact engagement",
+                        "Arc initiation",
+                        "High resistance variability due to arcing",
+                        "Current flow begins",
+                        "Contact bounce and instability"
+                    ],
+                    "current": "Sharp rise to ~720 - current flow begins",
+                    "resistance": "Highly variable (300-850 µΩ) - arcing occurs",
+                    "travel": "Continues to increase to ~750 - contacts closing"
+                },
+                "diagnosticVerdict": "Healthy. A crisp, singular drop in resistance confirms precise contact timing and alignment. The characteristics of the resistance during this short interval provide insight into the condition of the arcing tips and their ability to handle the initial electrical stress.",
+                "endTime": 103,
+                "eventSynopsis": "The moving arcing contact makes its first connection with the fixed arcing contact. This is the critical moment where current begins to flow, and any closing arc (or 'pre-arc') is established and managed.",
+                "id": "arcing-contact-engagement-arc-initiation",
+                "name": "Arcing Contact Engagement & Arc Initiation",
+                "phaseNumber": 2,
+                "phaseTitle": "Closing Operation — Arcing Contact Engagement & Arc Initiation",
+                "startTime": 95,
+                "waveformAnalysis": {
+                    "current": "Begins to flow the instant the arcing contacts engage, showing a sharp rise.",
+                    "resistance": "Exhibits a sudden, sharp drop from infinity to a finite resistance value. This distinctive drop pinpoints the moment of arcing contact touch. The initial peak and subsequent turbulent signature in this brief period reflect the dynamic nature of arc establishment as the contacts close.",
+                    "travel": "The travel curve continues its upward trajectory, as the main contacts have not yet engaged."
+                }
+            },
+            {
+                "color": "#4caf50",
+                "description": "Main contact conduction",
+                "details": {
+                    "characteristics": [
+                        "Main contact conduction",
+                        "Low resistance indicates good contact",
+                        "Consistent current flow",
+                        "Contacts fully engaged"
+                    ],
+                    "current": "Gradual decline from 720 to 670 - stable flow",
+                    "resistance": "Stable low resistance (~300 µΩ) - good contact",
+                    "travel": "Constant at ~750 - contacts fully closed"
+                },
+                "diagnosticVerdict": "Healthy. A low and non-fluctuating static resistance is the hallmark of clean, well-aligned main contacts under proper mechanical pressure. This is the most important indicator of the breaker's ability to carry its rated current without overheating.",
+                "endTime": 325,
+                "eventSynopsis": "Following the engagement of the arcing contacts, the main contacts close and firmly seat. This establishes the primary, low-resistance path for continuous current flow. The breaker is now in a stable, fully closed position.",
+                "id": "main-contact-conduction",
+                "name": "Main Contact Conduction",
+                "phaseNumber": 3,
+                "phaseTitle": "Fully Closed State — Main Contact Conduction",
+                "startTime": 103,
+                "waveformAnalysis": {
+                    "current": "Rises to its full, steady-state value, reflecting the establishment of a low-resistance path.",
+                    "resistance": "The resistance value drops dramatically to a minimal, stable, and nearly flat line (typically in the micro-ohm range). This signifies the transition of current from the arcing contacts to the larger, more conductive main contacts.",
+                    "travel": "The curve flattens out, indicating that the contact assembly has completed its travel and is now mechanically latched."
+                }
+            },
+            {
+                "color": "#2196f3",
+                "description": "Main contact parting and arc elongation",
+                "details": {
+                    "characteristics": [
+                        "Main contact parting",
+                        "Arc elongation",
+                        "Current flow interruption",
+                        "Rapid resistance increase"
+                    ],
+                    "current": "Sharp drop from 670 to 230 - current flow stops",
+                    "resistance": "Rising from 300 to 850 µΩ - contacts separating",
+                    "travel": "Sharp drop from 750 to 200 - contacts opening"
+                },
+                "diagnosticVerdict": "Healthy. This signature confirms the correct opening sequence (main contacts part before arcing contacts). The profile of the rising resistance curve during arcing is a direct measure of the interrupter's effectiveness at de-ionizing the arc path, which is crucial for successful fault interruption.",
+                "endTime": 332,
+                "eventSynopsis": "The 'Open' or 'Trip' command is issued. The main contacts separate first, commutating the entire current flow to the arcing contacts. Immediately after, the arcing contacts separate, drawing an electrical arc. This arc is then elongated and cooled by the interrupting medium (e.g., SF₆ gas blast).",
+                "id": "main-contact-parting-arc-elongation",
+                "name": "Main Contact Parting & Arc Elongation",
+                "phaseNumber": 4,
+                "phaseTitle": "Opening Operation — Main Contact Parting & Arc Elongation",
+                "startTime": 325,
+                "waveformAnalysis": {
+                    "current": "Continues to flow through the arc until the point of extinction.",
+                    "resistance": "Shows a sharp initial step-up from the micro-ohm level as the main contacts part. It then begins a steep climb as the arcing contacts separate and the plasma arc channel is stretched, cooled, and its resistance increases.",
+                    "travel": "Begins a smooth downward ramp as the mechanism withdraws the contacts."
+                }
+            },
+            {
+                "color": "#a629ff",
+                "description": "Final open state",
+                "details": {
+                    "characteristics": [
+                        "Final open state",
+                        "No electrical conduction",
+                        "High resistance due to air gap",
+                        "Operation cycle complete",
+                        "Contacts fully open"
+                    ],
+                    "current": "Low current (~230) - no current flow",
+                    "resistance": "High resistance (~850 µΩ) - contacts fully open",
+                    "travel": "Constant at ~200 - contacts fully separated"
+                },
+                "diagnosticVerdict": "Healthy. A clean and final transition to zero current and infinite resistance signifies a successful interruption. The breaker is now in a safe, isolated, and dielectrically secure state.",
+                "endTime": 400,
+                "eventSynopsis": "The arc is successfully extinguished at a natural current zero. The arcing contacts have separated sufficiently to establish a dielectric gap capable of withstanding the system's recovery voltage, ensuring the circuit remains open.",
+                "id": "final-open-state",
+                "name": "Final Open State",
+                "phaseNumber": 5,
+                "phaseTitle": "Post-Interruption — Final Open State",
+                "startTime": 332,
+                "waveformAnalysis": {
+                    "current": "Drops definitively to zero. The absence of any post-arc current confirms a successful quench and no restrikes.",
+                    "resistance": "Returns to an infinite value, indicating a complete and final interruption of the conductive path.",
+                    "travel": "The travel curve settles at the fully open position, confirming the full mechanical stroke has been completed."
+                }
+            }
+        ],
+        "waveform": [
+            {
+                "close_coil": 150.0,
+                "current": 230.0,
+                "resistance": 850.0,
+                "shap": 0.09737171471409063,
+                "time": 0.0,
+                "travel": 200.0,
+                "trip_coil_1": 80.0,
+                "trip_coil_2": 50.0
+            },
+            {
+                "close_coil": 150.0,
+                "current": 230.0,
+                "resistance": 850.0,
+                "shap": 0.07470574606161126,
+                "time": 0.5,
+                "travel": 200.0,
+                "trip_coil_1": 80.0,
+                "trip_coil_2": 50.0
+            }
+        ]
+    },
+    "breakerId": "6926e63d4614721a79b7b24e",
+    "createdAt": "Wed, 03 Dec 2025 14:18:04 GMT",
+    "healthScore": 93.3,
+    "operator": "Kunal Sachin Kharat",
+    "r": {
+        "aiVerdict": {
+            "aiAdvice": [
+                {
+                    "color": "#B71C1C",
+                    "confidence": 94,
+                    "description": "Deploy continuous DCRM monitoring system to track contact resistance variations in real-time, enabling early detection of degradation patterns.",
+                    "expectedImpact": "Prevent unexpected failures by 85%",
+                    "id": "1",
+                    "priority": "Critical",
+                    "title": "Implement Real-time Contact Resistance Monitoring"
+                },
+                {
+                    "color": "#F57F17",
+                    "confidence": 89,
+                    "description": "Address the detected contact bounce (55-65ms region) through operating mechanism calibration and spring tension adjustment.",
+                    "expectedImpact": "Reduce contact wear rate by 40%",
+                    "id": "2",
+                    "priority": "High",
+                    "title": "Optimize Contact Bounce Mitigation Strategy"
+                },
+                {
+                    "color": "#F57F17",
+                    "confidence": 92,
+                    "description": "Implement predictive SF6 pressure monitoring with automated alerts for gas quality degradation and leakage detection.",
+                    "expectedImpact": "Maintain optimal arc quenching performance",
+                    "id": "3",
+                    "priority": "High",
+                    "title": "Enhanced SF6 Gas Management Protocol"
+                }
+            ],
+            "confidence": 72.5,
+            "effectAnalysis": {
+                "longTerm": [
+                    "Extended circuit breaker service life by 25-30%",
+                    "Reduced maintenance costs by $50,000-75,000 annually",
+                    "Improved grid reliability and reduced downtime",
+                    "Predictive maintenance scheduling optimization"
+                ],
+                "performanceGains": [
+                    "Improved contact resistance stability",
+                    "Enhanced operational reliability"
+                ],
+                "riskMitigation": [
+                    "Prevent catastrophic failures through early detection",
+                    "Reduce unplanned outages by 75%"
+                ],
+                "shortTerm": [
+                    "Immediate improvement in contact resistance stability",
+                    "Reduced contact bounce amplitude by 60-70%",
+                    "Enhanced SF6 pressure monitoring accuracy",
+                    "Real-time fault detection capabilities"
+                ]
+            },
+            "faultLabel": "Minor Contact Pitting & Bounce",
+            "futureFaultsPdf": [
+                {
+                    "color": "#2E7D32",
+                    "evidence": "Correlated with slight pressure drops over the last 3 tests.",
+                    "fault": "SF6 Gas Pressure Loss (Slow Leak)",
+                    "id": "1",
+                    "probability": 68,
+                    "timeline": "12 - 18 Months"
+                },
+                {
+                    "color": "#F57F17",
+                    "evidence": "Based on minor, recurring deviations in the travel curve signature.",
+                    "fault": "Operating Mechanism Sluggishness",
+                    "id": "2",
+                    "probability": 42,
+                    "timeline": "9 - 12 Months"
+                },
+                {
+                    "color": "#0D47A1",
+                    "evidence": "Common failure mode for this model after 10 years of service.",
+                    "fault": "Auxiliary Switch Timing Drift",
+                    "id": "3",
+                    "probability": 37,
+                    "timeline": "> 24 Months"
+                }
+            ],
+            "maintenanceActions": [
+                {
+                    "actions": [
+                        {
+                            "id": "1",
+                            "justification": "SF6 pressure declining from 7.0 to 6.8 bar over recent tests. Gas quality directly affects arc quenching and contact performance.",
+                            "timeline": "Within 1 month",
+                            "title": "Perform SF6 Gas Analysis and Pressure Check",
+                            "whatToLookFor": [
+                                "SF6 pressure levels",
+                                "Moisture content in gas",
+                                "Gas purity analysis results",
+                                "Leak detection at joints and seals"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#FFCDD2",
+                    "color": "#B71C1C",
+                    "priority": "Priority 1"
+                },
+                {
+                    "actions": [
+                        {
+                            "id": "2",
+                            "justification": "Travel distance measurements show slight deviations from expected values during operation.",
+                            "timeline": "Within 3 months",
+                            "title": "Calibrate Travel Distance Sensors",
+                            "whatToLookFor": [
+                                "Sensor mounting integrity",
+                                "Calibration certificate validity",
+                                "Signal wire connections",
+                                "Reference point accuracy"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#FFF9C4",
+                    "color": "#F57F17",
+                    "priority": "Priority 2"
+                },
+                {
+                    "actions": [
+                        {
+                            "id": "3",
+                            "justification": "Travel time variations suggest increased friction in the operating mechanism.",
+                            "timeline": "Within 6 weeks",
+                            "title": "Lubricate Operating Mechanism",
+                            "whatToLookFor": [
+                                "Lubrication points accessibility",
+                                "Old grease contamination",
+                                "Mechanism wear patterns",
+                                "Spring tension consistency"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#BBDEFB",
+                    "color": "#0D47A1",
+                    "priority": "Priority 3"
+                }
+            ],
+            "rulEstimate": "10000-12000 cycles",
+            "severity": "Medium",
+            "severityReason": "Slight bounce detected which may accelerate contact wear.",
+            "topShapContributors": [
+                {
+                    "contribution": 45,
+                    "feature": "Resistance slope (55-65ms)"
+                },
+                {
+                    "contribution": 25,
+                    "feature": "Peak resistance variance"
+                },
+                {
+                    "contribution": 15,
+                    "feature": "Travel curve post-contact"
+                },
+                {
+                    "contribution": -8,
+                    "feature": "Current zero-cross time"
+                },
+                {
+                    "contribution": -12,
+                    "feature": "Opening speed"
+                }
+            ],
+            "uncertainty": "±1500 cycles"
+        },
+        "cbhi": {
+            "history": [
+                {
+                    "score": 85,
+                    "year": 2022
+                },
+                {
+                    "score": 86,
+                    "year": 2023
+                },
+                {
+                    "score": 87,
+                    "year": 2024
+                }
+            ],
+            "score": 93
+        },
+        "findings": "Minor Contact Pitting & Bounce",
+        "healthScore": 93,
+        "info": {
+            "faultCondition": "Minor Contact Pitting & Bounce",
+            "id": "6926e63d4614721a79b7b24e",
+            "sf6PressureStatus": "Normal",
+            "temperature": 28,
+            "testDate": "03/12/2025",
+            "type": "SF6 400kV"
+        },
+        "kpis": [
+            {
+                "name": "Main Wipe",
+                "unit": "mm",
+                "value": 15.1
+            },
+            {
+                "name": "DLRO Value",
+                "unit": "µΩ",
+                "value": 10.1
+            },
+            {
+                "name": "Contact Travel distance",
+                "unit": "mm",
+                "value": 185
+            },
+            {
+                "name": "Arc Wipe",
+                "unit": "mm",
+                "value": 32
+            },
+            {
+                "name": "Contact Speed",
+                "unit": "m/s",
+                "value": 6.1
+            },
+            {
+                "name": "SF6 Pressure",
+                "unit": "bar",
+                "value": 6.8
+            },
+            {
+                "name": "Peak Resistance",
+                "unit": "µΩ",
+                "value": 101.6
+            },
+            {
+                "name": "Opening Time",
+                "unit": "ms",
+                "value": 28.5
+            },
+            {
+                "name": "Closing Time",
+                "unit": "ms",
+                "value": 85.2
+            },
+            {
+                "name": "Ambient Temp",
+                "unit": "°C",
+                "value": 28
+            }
+        ],
+        "phaseWiseAnalysis": [
+            {
+                "color": "#ff9800",
+                "description": "Initial state before arc contact occurs",
+                "details": {
+                    "characteristics": [
+                        "Contacts are physically separated",
+                        "No electrical conduction",
+                        "Travel distance increasing as contacts approach",
+                        "High resistance due to air gap"
+                    ],
+                    "current": "Low current (~230) - no current flow",
+                    "resistance": "High resistance (~850 µΩ) - contacts are open",
+                    "travel": "Gradual increase from 200 to 500 - contact approaching"
+                },
+                "diagnosticVerdict": "Healthy. This phase serves as a baseline for mechanical operation. A consistent travel curve confirms a healthy operating mechanism without hesitations or obstructions.",
+                "endTime": 95,
+                "eventSynopsis": "The 'Close' command initiates the operating mechanism, which moves the contact assembly towards the fixed contacts. During this phase, there is no electrical connection.",
+                "id": "pre-contact-travel",
+                "name": "Pre-Contact Travel",
+                "phaseNumber": 1,
+                "phaseTitle": "Closing Operation — Pre-Contact Travel",
+                "startTime": 0,
+                "waveformAnalysis": {
+                    "current": "Remains at zero, confirming the absence of any conductive path or leakage.",
+                    "resistance": "Remains at a state of infinite resistance, indicating a clean and sufficient air gap between all contacts.",
+                    "travel": "The curve shows a smooth, continuous ramp, representing the unimpeded mechanical movement of the contacts at the specified closing velocity."
+                }
+            },
+            {
+                "color": "#ff26bd",
+                "description": "Arcing contact engagement and arc initiation",
+                "details": {
+                    "characteristics": [
+                        "Arcing contact engagement",
+                        "Arc initiation",
+                        "High resistance variability due to arcing",
+                        "Current flow begins",
+                        "Contact bounce and instability"
+                    ],
+                    "current": "Sharp rise to ~720 - current flow begins",
+                    "resistance": "Highly variable (300-850 µΩ) - arcing occurs",
+                    "travel": "Continues to increase to ~750 - contacts closing"
+                },
+                "diagnosticVerdict": "Healthy. A crisp, singular drop in resistance confirms precise contact timing and alignment. The characteristics of the resistance during this short interval provide insight into the condition of the arcing tips and their ability to handle the initial electrical stress.",
+                "endTime": 103,
+                "eventSynopsis": "The moving arcing contact makes its first connection with the fixed arcing contact. This is the critical moment where current begins to flow, and any closing arc (or 'pre-arc') is established and managed.",
+                "id": "arcing-contact-engagement-arc-initiation",
+                "name": "Arcing Contact Engagement & Arc Initiation",
+                "phaseNumber": 2,
+                "phaseTitle": "Closing Operation — Arcing Contact Engagement & Arc Initiation",
+                "startTime": 95,
+                "waveformAnalysis": {
+                    "current": "Begins to flow the instant the arcing contacts engage, showing a sharp rise.",
+                    "resistance": "Exhibits a sudden, sharp drop from infinity to a finite resistance value. This distinctive drop pinpoints the moment of arcing contact touch. The initial peak and subsequent turbulent signature in this brief period reflect the dynamic nature of arc establishment as the contacts close.",
+                    "travel": "The travel curve continues its upward trajectory, as the main contacts have not yet engaged."
+                }
+            },
+            {
+                "color": "#4caf50",
+                "description": "Main contact conduction",
+                "details": {
+                    "characteristics": [
+                        "Main contact conduction",
+                        "Low resistance indicates good contact",
+                        "Consistent current flow",
+                        "Contacts fully engaged"
+                    ],
+                    "current": "Gradual decline from 720 to 670 - stable flow",
+                    "resistance": "Stable low resistance (~300 µΩ) - good contact",
+                    "travel": "Constant at ~750 - contacts fully closed"
+                },
+                "diagnosticVerdict": "Healthy. A low and non-fluctuating static resistance is the hallmark of clean, well-aligned main contacts under proper mechanical pressure. This is the most important indicator of the breaker's ability to carry its rated current without overheating.",
+                "endTime": 325,
+                "eventSynopsis": "Following the engagement of the arcing contacts, the main contacts close and firmly seat. This establishes the primary, low-resistance path for continuous current flow. The breaker is now in a stable, fully closed position.",
+                "id": "main-contact-conduction",
+                "name": "Main Contact Conduction",
+                "phaseNumber": 3,
+                "phaseTitle": "Fully Closed State — Main Contact Conduction",
+                "startTime": 103,
+                "waveformAnalysis": {
+                    "current": "Rises to its full, steady-state value, reflecting the establishment of a low-resistance path.",
+                    "resistance": "The resistance value drops dramatically to a minimal, stable, and nearly flat line (typically in the micro-ohm range). This signifies the transition of current from the arcing contacts to the larger, more conductive main contacts.",
+                    "travel": "The curve flattens out, indicating that the contact assembly has completed its travel and is now mechanically latched."
+                }
+            },
+            {
+                "color": "#2196f3",
+                "description": "Main contact parting and arc elongation",
+                "details": {
+                    "characteristics": [
+                        "Main contact parting",
+                        "Arc elongation",
+                        "Current flow interruption",
+                        "Rapid resistance increase"
+                    ],
+                    "current": "Sharp drop from 670 to 230 - current flow stops",
+                    "resistance": "Rising from 300 to 850 µΩ - contacts separating",
+                    "travel": "Sharp drop from 750 to 200 - contacts opening"
+                },
+                "diagnosticVerdict": "Healthy. This signature confirms the correct opening sequence (main contacts part before arcing contacts). The profile of the rising resistance curve during arcing is a direct measure of the interrupter's effectiveness at de-ionizing the arc path, which is crucial for successful fault interruption.",
+                "endTime": 332,
+                "eventSynopsis": "The 'Open' or 'Trip' command is issued. The main contacts separate first, commutating the entire current flow to the arcing contacts. Immediately after, the arcing contacts separate, drawing an electrical arc. This arc is then elongated and cooled by the interrupting medium (e.g., SF₆ gas blast).",
+                "id": "main-contact-parting-arc-elongation",
+                "name": "Main Contact Parting & Arc Elongation",
+                "phaseNumber": 4,
+                "phaseTitle": "Opening Operation — Main Contact Parting & Arc Elongation",
+                "startTime": 325,
+                "waveformAnalysis": {
+                    "current": "Continues to flow through the arc until the point of extinction.",
+                    "resistance": "Shows a sharp initial step-up from the micro-ohm level as the main contacts part. It then begins a steep climb as the arcing contacts separate and the plasma arc channel is stretched, cooled, and its resistance increases.",
+                    "travel": "Begins a smooth downward ramp as the mechanism withdraws the contacts."
+                }
+            },
+            {
+                "color": "#a629ff",
+                "description": "Final open state",
+                "details": {
+                    "characteristics": [
+                        "Final open state",
+                        "No electrical conduction",
+                        "High resistance due to air gap",
+                        "Operation cycle complete",
+                        "Contacts fully open"
+                    ],
+                    "current": "Low current (~230) - no current flow",
+                    "resistance": "High resistance (~850 µΩ) - contacts fully open",
+                    "travel": "Constant at ~200 - contacts fully separated"
+                },
+                "diagnosticVerdict": "Healthy. A clean and final transition to zero current and infinite resistance signifies a successful interruption. The breaker is now in a safe, isolated, and dielectrically secure state.",
+                "endTime": 400,
+                "eventSynopsis": "The arc is successfully extinguished at a natural current zero. The arcing contacts have separated sufficiently to establish a dielectric gap capable of withstanding the system's recovery voltage, ensuring the circuit remains open.",
+                "id": "final-open-state",
+                "name": "Final Open State",
+                "phaseNumber": 5,
+                "phaseTitle": "Post-Interruption — Final Open State",
+                "startTime": 332,
+                "waveformAnalysis": {
+                    "current": "Drops definitively to zero. The absence of any post-arc current confirms a successful quench and no restrikes.",
+                    "resistance": "Returns to an infinite value, indicating a complete and final interruption of the conductive path.",
+                    "travel": "The travel curve settles at the fully open position, confirming the full mechanical stroke has been completed."
+                }
+            }
+        ],
+        "waveform": [
+            {
+                "close_coil": 150.0,
+                "current": 230.0,
+                "resistance": 850.0,
+                "shap": 0.09772548241224006,
+                "time": 0.0,
+                "travel": 200.0,
+                "trip_coil_1": 80.0,
+                "trip_coil_2": 50.0
+            }
+        ]
+    },
+    "status": "completed",
+    "testDate": "Wed, 03 Dec 2025 14:18:04 GMT",
+    "testId": "TEST-FBB95AA0",
+    "type": "SF6 400kV",
+    "userId": "6925e391d6a0f814a3ea5b30",
+    "y": {
+        "aiVerdict": {
+            "aiAdvice": [
+                {
+                    "color": "#B71C1C",
+                    "confidence": 94,
+                    "description": "Deploy continuous DCRM monitoring system to track contact resistance variations in real-time, enabling early detection of degradation patterns.",
+                    "expectedImpact": "Prevent unexpected failures by 85%",
+                    "id": "1",
+                    "priority": "Critical",
+                    "title": "Implement Real-time Contact Resistance Monitoring"
+                },
+                {
+                    "color": "#F57F17",
+                    "confidence": 89,
+                    "description": "Address the detected contact bounce (55-65ms region) through operating mechanism calibration and spring tension adjustment.",
+                    "expectedImpact": "Reduce contact wear rate by 40%",
+                    "id": "2",
+                    "priority": "High",
+                    "title": "Optimize Contact Bounce Mitigation Strategy"
+                },
+                {
+                    "color": "#F57F17",
+                    "confidence": 92,
+                    "description": "Implement predictive SF6 pressure monitoring with automated alerts for gas quality degradation and leakage detection.",
+                    "expectedImpact": "Maintain optimal arc quenching performance",
+                    "id": "3",
+                    "priority": "High",
+                    "title": "Enhanced SF6 Gas Management Protocol"
+                }
+            ],
+            "confidence": 72.5,
+            "effectAnalysis": {
+                "longTerm": [
+                    "Extended circuit breaker service life by 25-30%",
+                    "Reduced maintenance costs by $50,000-75,000 annually",
+                    "Improved grid reliability and reduced downtime",
+                    "Predictive maintenance scheduling optimization"
+                ],
+                "performanceGains": [
+                    "Improved contact resistance stability",
+                    "Enhanced operational reliability"
+                ],
+                "riskMitigation": [
+                    "Prevent catastrophic failures through early detection",
+                    "Reduce unplanned outages by 75%"
+                ],
+                "shortTerm": [
+                    "Immediate improvement in contact resistance stability",
+                    "Reduced contact bounce amplitude by 60-70%",
+                    "Enhanced SF6 pressure monitoring accuracy",
+                    "Real-time fault detection capabilities"
+                ]
+            },
+            "faultLabel": "Minor Contact Pitting & Bounce",
+            "futureFaultsPdf": [
+                {
+                    "color": "#2E7D32",
+                    "evidence": "Correlated with slight pressure drops over the last 3 tests.",
+                    "fault": "SF6 Gas Pressure Loss (Slow Leak)",
+                    "id": "1",
+                    "probability": 68,
+                    "timeline": "12 - 18 Months"
+                },
+                {
+                    "color": "#F57F17",
+                    "evidence": "Based on minor, recurring deviations in the travel curve signature.",
+                    "fault": "Operating Mechanism Sluggishness",
+                    "id": "2",
+                    "probability": 42,
+                    "timeline": "9 - 12 Months"
+                },
+                {
+                    "color": "#0D47A1",
+                    "evidence": "Common failure mode for this model after 10 years of service.",
+                    "fault": "Auxiliary Switch Timing Drift",
+                    "id": "3",
+                    "probability": 37,
+                    "timeline": "> 24 Months"
+                }
+            ],
+            "maintenanceActions": [
+                {
+                    "actions": [
+                        {
+                            "id": "1",
+                            "justification": "SF6 pressure declining from 7.0 to 6.8 bar over recent tests. Gas quality directly affects arc quenching and contact performance.",
+                            "timeline": "Within 1 month",
+                            "title": "Perform SF6 Gas Analysis and Pressure Check",
+                            "whatToLookFor": [
+                                "SF6 pressure levels",
+                                "Moisture content in gas",
+                                "Gas purity analysis results",
+                                "Leak detection at joints and seals"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#FFCDD2",
+                    "color": "#B71C1C",
+                    "priority": "Priority 1"
+                },
+                {
+                    "actions": [
+                        {
+                            "id": "2",
+                            "justification": "Travel distance measurements show slight deviations from expected values during operation.",
+                            "timeline": "Within 3 months",
+                            "title": "Calibrate Travel Distance Sensors",
+                            "whatToLookFor": [
+                                "Sensor mounting integrity",
+                                "Calibration certificate validity",
+                                "Signal wire connections",
+                                "Reference point accuracy"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#FFF9C4",
+                    "color": "#F57F17",
+                    "priority": "Priority 2"
+                },
+                {
+                    "actions": [
+                        {
+                            "id": "3",
+                            "justification": "Travel time variations suggest increased friction in the operating mechanism.",
+                            "timeline": "Within 6 weeks",
+                            "title": "Lubricate Operating Mechanism",
+                            "whatToLookFor": [
+                                "Lubrication points accessibility",
+                                "Old grease contamination",
+                                "Mechanism wear patterns",
+                                "Spring tension consistency"
+                            ]
+                        }
+                    ],
+                    "bgColor": "#BBDEFB",
+                    "color": "#0D47A1",
+                    "priority": "Priority 3"
+                }
+            ],
+            "rulEstimate": "10000-12000 cycles",
+            "severity": "Medium",
+            "severityReason": "Slight bounce detected which may accelerate contact wear.",
+            "topShapContributors": [
+                {
+                    "contribution": 45,
+                    "feature": "Resistance slope (55-65ms)"
+                },
+                {
+                    "contribution": 25,
+                    "feature": "Peak resistance variance"
+                },
+                {
+                    "contribution": 15,
+                    "feature": "Travel curve post-contact"
+                },
+                {
+                    "contribution": -8,
+                    "feature": "Current zero-cross time"
+                },
+                {
+                    "contribution": -12,
+                    "feature": "Opening speed"
+                }
+            ],
+            "uncertainty": "±1500 cycles"
+        },
+        "cbhi": {
+            "history": [
+                {
+                    "score": 85,
+                    "year": 2022
+                },
+                {
+                    "score": 86,
+                    "year": 2023
+                },
+                {
+                    "score": 87,
+                    "year": 2024
+                }
+            ],
+            "score": 92
+        },
+        "findings": "Minor Contact Pitting & Bounce",
+        "healthScore": 92,
+        "info": {
+            "faultCondition": "Minor Contact Pitting & Bounce",
+            "id": "6926e63d4614721a79b7b24e",
+            "sf6PressureStatus": "Normal",
+            "temperature": 28,
+            "testDate": "03/12/2025",
+            "type": "SF6 400kV"
+        },
+        "kpis": [
+            {
+                "name": "Main Wipe",
+                "unit": "mm",
+                "value": 15.1
+            },
+            {
+                "name": "DLRO Value",
+                "unit": "µΩ",
+                "value": 10.1
+            },
+            {
+                "name": "Contact Travel distance",
+                "unit": "mm",
+                "value": 185
+            },
+            {
+                "name": "Arc Wipe",
+                "unit": "mm",
+                "value": 32
+            },
+            {
+                "name": "Contact Speed",
+                "unit": "m/s",
+                "value": 6.1
+            },
+            {
+                "name": "SF6 Pressure",
+                "unit": "bar",
+                "value": 6.8
+            },
+            {
+                "name": "Peak Resistance",
+                "unit": "µΩ",
+                "value": 101.6
+            },
+            {
+                "name": "Opening Time",
+                "unit": "ms",
+                "value": 28.5
+            },
+            {
+                "name": "Closing Time",
+                "unit": "ms",
+                "value": 85.2
+            },
+            {
+                "name": "Ambient Temp",
+                "unit": "°C",
+                "value": 28
+            }
+        ],
+        "phaseWiseAnalysis": [
+            {
+                "color": "#ff9800",
+                "description": "Initial state before arc contact occurs",
+                "details": {
+                    "characteristics": [
+                        "Contacts are physically separated",
+                        "No electrical conduction",
+                        "Travel distance increasing as contacts approach",
+                        "High resistance due to air gap"
+                    ],
+                    "current": "Low current (~230) - no current flow",
+                    "resistance": "High resistance (~850 µΩ) - contacts are open",
+                    "travel": "Gradual increase from 200 to 500 - contact approaching"
+                },
+                "diagnosticVerdict": "Healthy. This phase serves as a baseline for mechanical operation. A consistent travel curve confirms a healthy operating mechanism without hesitations or obstructions.",
+                "endTime": 95,
+                "eventSynopsis": "The 'Close' command initiates the operating mechanism, which moves the contact assembly towards the fixed contacts. During this phase, there is no electrical connection.",
+                "id": "pre-contact-travel",
+                "name": "Pre-Contact Travel",
+                "phaseNumber": 1,
+                "phaseTitle": "Closing Operation — Pre-Contact Travel",
+                "startTime": 0,
+                "waveformAnalysis": {
+                    "current": "Remains at zero, confirming the absence of any conductive path or leakage.",
+                    "resistance": "Remains at a state of infinite resistance, indicating a clean and sufficient air gap between all contacts.",
+                    "travel": "The curve shows a smooth, continuous ramp, representing the unimpeded mechanical movement of the contacts at the specified closing velocity."
+                }
+            },
+            {
+                "color": "#ff26bd",
+                "description": "Arcing contact engagement and arc initiation",
+                "details": {
+                    "characteristics": [
+                        "Arcing contact engagement",
+                        "Arc initiation",
+                        "High resistance variability due to arcing",
+                        "Current flow begins",
+                        "Contact bounce and instability"
+                    ],
+                    "current": "Sharp rise to ~720 - current flow begins",
+                    "resistance": "Highly variable (300-850 µΩ) - arcing occurs",
+                    "travel": "Continues to increase to ~750 - contacts closing"
+                },
+                "diagnosticVerdict": "Healthy. A crisp, singular drop in resistance confirms precise contact timing and alignment. The characteristics of the resistance during this short interval provide insight into the condition of the arcing tips and their ability to handle the initial electrical stress.",
+                "endTime": 103,
+                "eventSynopsis": "The moving arcing contact makes its first connection with the fixed arcing contact. This is the critical moment where current begins to flow, and any closing arc (or 'pre-arc') is established and managed.",
+                "id": "arcing-contact-engagement-arc-initiation",
+                "name": "Arcing Contact Engagement & Arc Initiation",
+                "phaseNumber": 2,
+                "phaseTitle": "Closing Operation — Arcing Contact Engagement & Arc Initiation",
+                "startTime": 95,
+                "waveformAnalysis": {
+                    "current": "Begins to flow the instant the arcing contacts engage, showing a sharp rise.",
+                    "resistance": "Exhibits a sudden, sharp drop from infinity to a finite resistance value. This distinctive drop pinpoints the moment of arcing contact touch. The initial peak and subsequent turbulent signature in this brief period reflect the dynamic nature of arc establishment as the contacts close.",
+                    "travel": "The travel curve continues its upward trajectory, as the main contacts have not yet engaged."
+                }
+            },
+            {
+                "color": "#4caf50",
+                "description": "Main contact conduction",
+                "details": {
+                    "characteristics": [
+                        "Main contact conduction",
+                        "Low resistance indicates good contact",
+                        "Consistent current flow",
+                        "Contacts fully engaged"
+                    ],
+                    "current": "Gradual decline from 720 to 670 - stable flow",
+                    "resistance": "Stable low resistance (~300 µΩ) - good contact",
+                    "travel": "Constant at ~750 - contacts fully closed"
+                },
+                "diagnosticVerdict": "Healthy. A low and non-fluctuating static resistance is the hallmark of clean, well-aligned main contacts under proper mechanical pressure. This is the most important indicator of the breaker's ability to carry its rated current without overheating.",
+                "endTime": 325,
+                "eventSynopsis": "Following the engagement of the arcing contacts, the main contacts close and firmly seat. This establishes the primary, low-resistance path for continuous current flow. The breaker is now in a stable, fully closed position.",
+                "id": "main-contact-conduction",
+                "name": "Main Contact Conduction",
+                "phaseNumber": 3,
+                "phaseTitle": "Fully Closed State — Main Contact Conduction",
+                "startTime": 103,
+                "waveformAnalysis": {
+                    "current": "Rises to its full, steady-state value, reflecting the establishment of a low-resistance path.",
+                    "resistance": "The resistance value drops dramatically to a minimal, stable, and nearly flat line (typically in the micro-ohm range). This signifies the transition of current from the arcing contacts to the larger, more conductive main contacts.",
+                    "travel": "The curve flattens out, indicating that the contact assembly has completed its travel and is now mechanically latched."
+                }
+            },
+            {
+                "color": "#2196f3",
+                "description": "Main contact parting and arc elongation",
+                "details": {
+                    "characteristics": [
+                        "Main contact parting",
+                        "Arc elongation",
+                        "Current flow interruption",
+                        "Rapid resistance increase"
+                    ],
+                    "current": "Sharp drop from 670 to 230 - current flow stops",
+                    "resistance": "Rising from 300 to 850 µΩ - contacts separating",
+                    "travel": "Sharp drop from 750 to 200 - contacts opening"
+                },
+                "diagnosticVerdict": "Healthy. This signature confirms the correct opening sequence (main contacts part before arcing contacts). The profile of the rising resistance curve during arcing is a direct measure of the interrupter's effectiveness at de-ionizing the arc path, which is crucial for successful fault interruption.",
+                "endTime": 332,
+                "eventSynopsis": "The 'Open' or 'Trip' command is issued. The main contacts separate first, commutating the entire current flow to the arcing contacts. Immediately after, the arcing contacts separate, drawing an electrical arc. This arc is then elongated and cooled by the interrupting medium (e.g., SF₆ gas blast).",
+                "id": "main-contact-parting-arc-elongation",
+                "name": "Main Contact Parting & Arc Elongation",
+                "phaseNumber": 4,
+                "phaseTitle": "Opening Operation — Main Contact Parting & Arc Elongation",
+                "startTime": 325,
+                "waveformAnalysis": {
+                    "current": "Continues to flow through the arc until the point of extinction.",
+                    "resistance": "Shows a sharp initial step-up from the micro-ohm level as the main contacts part. It then begins a steep climb as the arcing contacts separate and the plasma arc channel is stretched, cooled, and its resistance increases.",
+                    "travel": "Begins a smooth downward ramp as the mechanism withdraws the contacts."
+                }
+            },
+            {
+                "color": "#a629ff",
+                "description": "Final open state",
+                "details": {
+                    "characteristics": [
+                        "Final open state",
+                        "No electrical conduction",
+                        "High resistance due to air gap",
+                        "Operation cycle complete",
+                        "Contacts fully open"
+                    ],
+                    "current": "Low current (~230) - no current flow",
+                    "resistance": "High resistance (~850 µΩ) - contacts fully open",
+                    "travel": "Constant at ~200 - contacts fully separated"
+                },
+                "diagnosticVerdict": "Healthy. A clean and final transition to zero current and infinite resistance signifies a successful interruption. The breaker is now in a safe, isolated, and dielectrically secure state.",
+                "endTime": 400,
+                "eventSynopsis": "The arc is successfully extinguished at a natural current zero. The arcing contacts have separated sufficiently to establish a dielectric gap capable of withstanding the system's recovery voltage, ensuring the circuit remains open.",
+                "id": "final-open-state",
+                "name": "Final Open State",
+                "phaseNumber": 5,
+                "phaseTitle": "Post-Interruption — Final Open State",
+                "startTime": 332,
+                "waveformAnalysis": {
+                    "current": "Drops definitively to zero. The absence of any post-arc current confirms a successful quench and no restrikes.",
+                    "resistance": "Returns to an infinite value, indicating a complete and final interruption of the conductive path.",
+                    "travel": "The travel curve settles at the fully open position, confirming the full mechanical stroke has been completed."
+                }
+            }
+        ],
+        "waveform": [
+            {
+                "close_coil": 150.0,
+                "current": 230.0,
+                "resistance": 850.0,
+                "shap": 0.03924488602754193,
+                "time": 0.0,
+                "travel": 200.0,
+                "trip_coil_1": 80.0,
+                "trip_coil_2": 50.0
+            }
+        ]
+    }
+}

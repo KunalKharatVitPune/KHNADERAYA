@@ -1,0 +1,234 @@
+{
+  "phaseWiseAnalysis": [
+    {
+      "phaseNumber": 1,
+      "id": "pre-contact-travel",
+      "name": "Pre-Contact Travel",
+      "phaseTitle": "Closing Operation — Pre-Contact Travel",
+      "description": "Initial state before arc contact occurs",
+      "color": "#ff9800",
+      "startTime": 0,
+      "endTime": 96,
+      "details": {
+        "resistance": "High resistance (~849 µΩ) - contacts are open",
+        "current": "Low current (~231) - no current flow",
+        "travel": "Gradual increase from 200 to 574 - contact approaching",
+        "characteristics": [
+          "Contacts are physically separated",
+          "High resistance due to air gap",
+          "Travel distance is increasing",
+          "Close coil activation begins movement"
+        ]
+      },
+      "waveformAnalysis": {
+        "resistance": "Resistance is high and stable (Avg: 849.1 μΩ ≥ 750 μΩ) with flat straight-line pattern (StdDev: 9.3 μΩ ≤ ±30 μΩ), indicating proper open circuit with clean separation and no premature contact.",
+        "current": "Current remains stable around its open circuit baseline of 230.0 A (Avg: 230.5), reinforcing no premature electrical connection.",
+        "travel": "Travel shows a smooth, continuous increase from 200.0 mm to 574.0 mm, representing unimpeded mechanical movement.",
+        "coilAnalysis": {
+          "closeCoil": {
+            "status": "Active",
+            "description": "Close coil activates to initiate closing operation.",
+            "measuredValues": "Avg: 4.50 A"
+          },
+          "tripCoil1": {
+            "status": "Inactive",
+            "description": "Trip coil 1 remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          },
+          "tripCoil2": {
+            "status": "Inactive",
+            "description": "Trip coil 2 remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          }
+        }
+      },
+      "diagnosticVerdict": "The phase is deemed Healthy. The resistance (Avg=849.05 μΩ, StdDev=9.34 μΩ) is high and very stable, consistent with the expected open circuit baseline for physically separated contacts. The current (Avg=230.53 A, StdDev=5.18 A) is also stable, aligning with a low/baseline current for the test setup, without any indication of premature rise or insulation breakdown. Travel shows a clear and smooth increase from 200.00 mm to 574.00 mm, indicating proper and uninterrupted mechanical movement. Additionally, the close coil is actively energized (Avg: 4.50 A), confirming clean activation.",
+      "eventSynopsis": "This phase captures the initial movement during a closing operation, where the contacts remain separated and the circuit breaker mechanism is initiating travel. The close coil is actively driving the contact system towards engagement.",
+      "confidence": 95
+    },
+    {
+      "phaseNumber": 2,
+      "id": "arcing-contact-engagement-arc-initiation",
+      "name": "Arcing Contact Engagement & Arc Initiation",
+      "phaseTitle": "Closing Operation — Arcing Contact Engagement & Arc Initiation",
+      "description": "Arcing contact engagement and arc initiation",
+      "color": "#ff26bd",
+      "startTime": 97,
+      "endTime": 115,
+      "details": {
+        "resistance": "Highly variable (331-650 µΩ) - arcing occurs",
+        "current": "Sharp rise to ~723 - current flow begins",
+        "travel": "Continues to increase to ~709 - contacts closing",
+        "characteristics": [
+          "Arcing contact engagement",
+          "Rapid resistance decrease",
+          "Current increase initiation",
+          "Travel progression during closure"
+        ]
+      },
+      "waveformAnalysis": {
+        "resistance": "Resistance exhibits healthy arcing behavior: sharp drop from 650.0 μΩ to 331.0 μΩ (Range: 319.0 μΩ) with prominent high-frequency arcing spikes (StdDev: 99.7 μΩ > 80), indicating proper arc initiation as arcing contacts engage, followed by arc transfer and main contact approach. This pattern confirms good contact surface condition and normal closing sequence.",
+        "current": "Current rises sharply from 402.0 A to 723.0 A (Rise: 321.0 A), establishing conduction path through arcing contacts and transitioning toward main contact closure, confirming effective current injection.",
+        "travel": "Travel increases smoothly from 582.0 mm to 709.0 mm, indicating unimpeded mechanical closure with proper contact wipe action.",
+        "coilAnalysis": {
+          "closeCoil": {
+            "status": "Active",
+            "description": "Close coil provides sustained closing force.",
+            "measuredValues": "Avg: 3.76 A"
+          },
+          "tripCoil1": {
+            "status": "Inactive",
+            "description": "Trip coil 1 remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          },
+          "tripCoil2": {
+            "status": "Inactive",
+            "description": "Trip coil 2 remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          }
+        }
+      },
+      "diagnosticVerdict": "The system is deemed Healthy for the Arcing Contact Engagement & Arc Initiation phase. This verdict is supported by the observed rapid resistance transition, decreasing from 650.00 μΩ to 331.00 μΩ, which signifies an efficient contact engagement and resistance drop as per healthy criteria. Concurrently, the current rapidly rises from 402.00 A to 723.00 A, confirming successful current injection. The travel data, showing a smooth progression from 582.00 mm to 709.00 mm, further indicates unhindered mechanical movement during this critical contact engagement.",
+      "eventSynopsis": "This phase marks the physical engagement of the arcing contacts, leading to a sharp decrease in circuit resistance and a corresponding rapid rise in current as the circuit begins to close.",
+      "confidence": 95
+    },
+    {
+      "phaseNumber": 3,
+      "id": "main-contact-conduction",
+      "name": "Main Contact Conduction",
+      "phaseTitle": "Fully Closed State — Main Contact Conduction",
+      "description": "Main contact conduction",
+      "color": "#4caf50",
+      "startTime": 116,
+      "endTime": 326,
+      "details": {
+        "resistance": "Stable low resistance (~300 µΩ) - good contact",
+        "current": "Gradual decline from 723 to 624 - stable flow",
+        "travel": "Constant at ~749 - contacts fully closed",
+        "characteristics": [
+          "Main contact fully closed",
+          "Stable low resistance",
+          "High current conduction",
+          "Trip coil activation"
+        ]
+      },
+      "waveformAnalysis": {
+        "resistance": "Resistance maintains a healthy flat plateau at low values (Avg: 300.0 μΩ ≤ 350 μΩ) with minimal deviation (StdDev: 5.0 μΩ ≤ ±50 μΩ), indicating excellent contact surface condition, proper pressure, and stable main contact conduction.",
+        "current": "Current remains high and stable, around 715.0 A (Avg: 692.7), confirming effective conduction at the injected test level.",
+        "travel": "Travel remains perfectly stable at its maximum stroke of approximately 750.0 mm (Avg: 749.1), indicating proper overtravel and firm contact.",
+        "coilAnalysis": {
+          "closeCoil": {
+            "status": "Inactive",
+            "description": "Close coil is de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          },
+          "tripCoil1": {
+            "status": "Active",
+            "description": "Trip coil 1 energizes towards the end of this phase, preparing for opening.",
+            "measuredValues": "Avg: 0.77 A"
+          },
+          "tripCoil2": {
+            "status": "Inactive",
+            "description": "Trip coil 2 remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          }
+        }
+      },
+      "diagnosticVerdict": "The health status is 'Healthy' because the average resistance of 299.99 μΩ is very low, accompanied by an exceptionally low standard deviation of 4.95 μΩ, indicating high contact stability and integrity, well below any unhealthy elevated resistance thresholds (e.g., >50-100 μΩ above baseline). The average current of 692.71 A is high and stable, as expected for full conduction. Furthermore, the travel remains stable at its maximum position (average 749.07 mm with a standard deviation of 4.51 mm), confirming sufficient overtravel and mechanical stability of the fully closed contacts.",
+      "eventSynopsis": "During this phase, the main contacts remain fully closed, exhibiting stable, low resistance conduction of high current. Towards the end of this period, the trip coil energizes, initiating the sequence for contact opening.",
+      "confidence": 95
+    },
+    {
+      "phaseNumber": 4,
+      "id": "main-contact-parting-arc-elongation",
+      "name": "Main Contact Parting & Arc Elongation",
+      "phaseTitle": "Opening Operation — Main Contact Parting & Arc Elongation",
+      "description": "Main contact parting and arc elongation",
+      "color": "#2196f3",
+      "startTime": 327,
+      "endTime": 348,
+      "details": {
+        "resistance": "Rising from 330 to 850 µΩ - contacts separating",
+        "current": "Sharp drop from 515 to 230 - current flow stops",
+        "travel": "Sharp drop from 723 to 200 - contacts opening",
+        "characteristics": [
+          "Physical contact separation",
+          "Arc elongation",
+          "Current interruption",
+          "Rapid decrease in travel"
+        ]
+      },
+      "waveformAnalysis": {
+        "resistance": "Resistance rises smoothly and progressively from 330.0 μΩ to 850.0 μΩ (Rise: 520.0 μΩ) with moderate deviation (StdDev: 156.2 μΩ < 250), indicating proper opening sequence: main contacts separate creating initial plateau-like transition, followed by controlled arc elongation without excessive spikes. This near-linear rise pattern confirms good contact separation and healthy arc behavior.",
+        "current": "Current drops steadily from 515.0 A to 230.0 A (Drop: 285.0 A), demonstrating controlled current interruption process without abrupt changes or sustained arcing.",
+        "travel": "Travel decreases smoothly from 723.0 mm to 200.0 mm (Drop: 523.0 mm), demonstrating proper opening speed and unimpeded mechanism operation, with adequate trip coil force.",
+        "coilAnalysis": {
+          "closeCoil": {
+            "status": "Inactive",
+            "description": "Close coil remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          },
+          "tripCoil1": {
+            "status": "Active",
+            "description": "Trip coil 1 maintains energization to ensure full opening.",
+            "measuredValues": "Avg: 5.50 A"
+          },
+          "tripCoil2": {
+            "status": "Inactive",
+            "description": "Trip coil 2 remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          }
+        }
+      },
+      "diagnosticVerdict": "The health status for this phase is 'Healthy'. The resistance exhibits a controlled and progressive rise from 330.00 μΩ to 850.00 μΩ, with a standard deviation of 156.16 μΩ, which is consistent with smooth contact parting and arc elongation without excessive spikes. Concurrently, the current demonstrates a steady decrease from a maximum of 515.00 A to a minimum of 230.00 A, aligning with the expected current interruption as the contacts separate. Travel shows a significant and consistent opening movement from 200.00 mm to 723.00 mm, and the active Trip Coil 1 (Avg: 5.50 A) confirms proper initiation of the opening operation, all indicative of a healthy phase.",
+      "eventSynopsis": "This phase details the main contact parting, subsequent arc formation and elongation, and the progressive reduction of current as the circuit breaker undergoes its opening operation.",
+      "confidence": 90
+    },
+    {
+      "phaseNumber": 5,
+      "id": "final-open-state",
+      "name": "Final Open State",
+      "phaseTitle": "Post-Interruption — Final Open State",
+      "description": "Final open state",
+      "color": "#a629ff",
+      "startTime": 349,
+      "endTime": 400,
+      "details": {
+        "resistance": "High resistance (~850 µΩ) - contacts fully open",
+        "current": "Low current (~230) - no current flow",
+        "travel": "Constant at ~200 - contacts fully separated",
+        "characteristics": [
+          "Circuit final isolation",
+          "Contacts fully open",
+          "System stable at rest",
+          "Post-interruption state"
+        ]
+      },
+      "waveformAnalysis": {
+        "resistance": "Resistance remains high and stable (Avg: 850.0 μΩ ≥ 750 μΩ) with flat straight-line pattern (StdDev: 0.0 μΩ ≤ ±30 μΩ), confirming full electrical isolation.",
+        "current": "Current remains stable around its open circuit baseline of 230.0 A (Avg: 230.0), indicating no residual leakage or current flow.",
+        "travel": "Travel remains stable at the fully open position of approximately 200.0 mm (Avg: 200.0), indicating mechanism at rest without rebound or drift.",
+        "coilAnalysis": {
+          "closeCoil": {
+            "status": "Inactive",
+            "description": "Close coil remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          },
+          "tripCoil1": {
+            "status": "Active",
+            "description": "Trip coil 1 de-energizes after the opening operation is complete.",
+            "measuredValues": "Avg: 0.11 A"
+          },
+          "tripCoil2": {
+            "status": "Inactive",
+            "description": "Trip coil 2 remains de-energized.",
+            "measuredValues": "Avg: 0.00 A"
+          }
+        }
+      },
+      "diagnosticVerdict": "The programmatic health status is 'Healthy' for the final open state. The travel data supports this, showing stable travel at 200.00 mm with a 0.00 mm StdDev, consistent with a fully open position and no rebound or drift, meeting a key healthy criterion. However, the observed average resistance of 850.00 μΩ and average current of 230.00 A significantly deviate from the expected 'high/stable resistance (around open circuit baseline)' and 'zero/low current (around open circuit baseline)' criteria for an open circuit. Furthermore, Trip Coil 1 is 'Active' with 0.11 A, contrary to the expectation of de-energization in a final open state. The 'Healthy' verdict implies that, within this specific diagnostic context, these resistance and current values, along with the active trip coil, are deemed acceptable for a healthy final open state despite not reflecting a true open circuit condition.",
+      "eventSynopsis": "This phase represents the stable, fully open state of the circuit breaker after current interruption, with contacts at their maximum separated position and the system at rest.",
+      "confidence": 20
+    }
+  ]
+}

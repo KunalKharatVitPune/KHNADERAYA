@@ -1,0 +1,74 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is E0D2-CACC
+C:.
+|   project_structure.txt
+|   requirements.txt
+|   start_api.bat
+|   
++---apps
+|       fastapi_server.py
+|       flask_server.py
+|       streamlit_dashboard.py
+|       
++---core
+|   +---agents
+|   |       advice.py
+|   |       diagnosis.py
+|   |       plotting.py
+|   |       recommendation.py
+|   |       
+|   +---calculators
+|   |       cbhi.py
+|   |       kpi.py
+|   |       rul.py
+|   |       
+|   +---engines
+|   |       advanced_rules.py
+|   |       diagnostics.py
+|   |       rules.py
+|   |       
+|   +---models
+|   |       vit_classifier.py
+|   |       vit_model.pth
+|   |       
+|   +---signal
+|   |       arcing.py
+|   |       phases.py
+|   |       segmentation.py
+|   |       
+|   \---utils
+|           report_generator.py
+|           
++---data
+|       dcrm-sample-response.txt
+|       df3_final (1).csv
+|       df3_final.csv
+|       phase_wise_interpretation.json
+|       sample.json
+|       test.xlsx
+|       TRIAL.JSON
+|       
++---database
+|       mongo_client.py
+|       
++---docs
+|       API_GUIDE.md
+|       QUICKSTART.md
+|       runner.txt
+|       TESTING_GUIDE.md
+|       
+\---tests
+        test_advanced_engine.py
+        test_api.py
+        test_arcing_analysis.py
+        test_defect_analysis.py
+        test_frontend.html
+        test_integration.py
+        test_json_formatter.py
+        test_kpi_integration.py
+        test_raj_integration_v2.py
+        test_rul_integration.py
+        test_segmentation.py
+        test_three_phase_flask.py
+        test_three_phase_frontend.html
+        test_unified_segmentation.py
