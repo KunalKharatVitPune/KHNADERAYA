@@ -1,32 +1,44 @@
-# Use an official Python runtime as a parent image
+# Use official Python runtime
 FROM python:3.10-slim
 
-# Set the working directory in the container
-WORKDIR /app
+# Make output unbuffered (helpful for logs)
+ENV PYTHONUNBUFFERED=1
+ENV PIP_NO_CACHE_DIR=1
 
-# Install system dependencies required for OpenCV and other common libraries
-# NOTE: libgl1-mesa-glx no longer exists in Debian Trixie
-RUN apt-get update && apt-get install -y \
+# Install system deps (minimal) needed by opencv & typical libs
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libgl1-mesa-gl1 \
+    libgl1 \
     libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy Python dependencies
-COPY requirements.txt .
+# Create non-root user
+RUN useradd --create-home --shell /bin/bash appuser
+WORKDIR /home/appuser/app
 
-# Install Python packages
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy & install Python dependencies first (cache layer)
+COPY requirements.txt .
+RUN python -m pip install --upgrade pip setuptools wheel \
+ && pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY . .
 
-# Expose port 5000 for Flask API
+# Ensure app files owned by non-root user, then switch
+RUN chown -R appuser:appuser /home/appuser/app
+USER appuser
+
+# Metadata
 EXPOSE 5000
 
-# Healthcheck
-HEALTHCHECK CMD curl --fail http://localhost:5000/ || exit 1
+# Healthcheck: App Platform sets $PORT at runtime; default to 5000 locally
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD curl --fail http://localhost:${PORT:-5000}/health || exit 1
 
-# Start the app
-CMD ["python", "apps/flask_server.py"]
+# Start with gunicorn (use PORT env var provided by App Platform)
+# Use shell form so $PORT is expanded at runtime
+CMD ["sh", "-c", "exec gunicorn -w 4 -b 0.0.0.0:${PORT:-5000} apps.flask_server:app"]
